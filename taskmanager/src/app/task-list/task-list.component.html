@@ -1,0 +1,26 @@
+<p>list of your to do tasks</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Detail</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let task of tasks">
+            <td>{{task.task_name}}</td>
+            <td>{{task.detail}}</td>
+            <td>
+                <button (click)="updateTask(task.id)" class="btn btn-info">Update</button>
+                <button (click)="deleteTask(task.id)" class="btn btn-danger" style="margin-left: 10px;;">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- <div *ngfor="let task of tasks">
+        <p>{{task.task_name}}</p>
+        <p>{{task.detail}}</p>
+</div> -->

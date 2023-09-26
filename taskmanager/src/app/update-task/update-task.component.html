@@ -1,0 +1,23 @@
+<div class="col-md-8 offset-md-3">
+
+    <h3>Modify your Task to suit you Better ;) </h3>
+    
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label>Task Name</label>
+            <input type="text" class="form-control" id="task_name" 
+            [(ngModel)] = "task.task_name" name="task_name*">
+        </div>
+    
+        <div>
+            <label>Detail</label>
+            <input type="text" class="form-control" id="detail" 
+            [(ngModel)] = "task.detail" name="detail*">
+        </div>
+    
+        <button class="btn btn-success" type="submit">Create</button>
+    
+    </form>
+    
+    </div>
